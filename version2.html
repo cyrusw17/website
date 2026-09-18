@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium websites for elite automotive detailing businesses. Strategic web design that positions your shop above the competition.">
+    <title>GroundWork - Web | The Website Your Detailing Business Deserves</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        
+        .version-nav {
+            background: #0a0a0a;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 2000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .version-nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .version-label {
+            color: #b8860b;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .version-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .version-link {
+            color: #999;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .version-link:hover {
+            color: white;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .version-link.active {
+            color: white;
+            background: #b8860b;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        .header {
+            padding: 30px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: #1a1a1a;
+            letter-spacing: -0.5px;
+        }
+        
+        .logo span {
+            color: #b8860b;
+        }
+        
+        .header-cta a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .header-cta a:hover {
+            color: #b8860b;
+        }
+        
+        .hero {
+            padding: 120px 0 100px;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2d2d2d 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 1;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-subtitle {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #b8860b;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+        
+        .hero .highlight {
+            color: #b8860b;
+        }
+        
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 50px;
+            opacity: 0.85;
+            line-height: 1.7;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .btn-primary {
+            background: #b8860b;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #1a1a1a;
+        }
+        
+        .hero-contact {
+            font-size: 16px;
+            opacity: 0.7;
+        }
+        
+        .hero-contact a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .hero-contact a:hover {
+            color: #b8860b;
+        }
+        
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-dark {
+            background: #fafafa;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-top: 80px;
+        }
+        
+        .value-item {
+            text-align: center;
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 36px;
+        }
+        
+        .value-item h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .value-item p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .showcase {
+            background: #1a1a1a;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .showcase-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .showcase-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            opacity: 0.85;
+        }
+        
+        .showcase-stat {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-box {
+            padding: 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: #b8860b;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .showcase-visual {
+            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+            padding: 60px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .showcase-visual-placeholder {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .showcase-visual-text {
+            font-size: 18px;
+            opacity: 0.7;
+        }
+        
+        .expertise {
+            padding: 100px 0;
+        }
+        
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+            margin-top: 60px;
+        }
+        
+        .expertise-content h4 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .expertise-list {
+            list-style: none;
+        }
+        
+        .expertise-list li {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e5e5;
+            font-size: 18px;
+        }
+        
+        .expertise-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .expertise-highlight {
+            background: #fafafa;
+            padding: 50px;
+            border-radius: 8px;
+            border-left: 4px solid #b8860b;
+        }
+        
+        .expertise-highlight h4 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .expertise-highlight p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-section {
+            background: #0f0f0f;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .testimonial-card {
+            max-width: 900px;
+            margin: 60px auto 0;
+            text-align: center;
+        }
+        
+        .testimonial-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .testimonial-role {
+            font-size: 16px;
+            opacity: 0.6;
+            margin-top: 5px;
+        }
+        
+        .pricing {
+            padding: 100px 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 60px auto 0;
+        }
+        
+        .pricing-card {
+            padding: 50px;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            border-color: #b8860b;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        
+        .pricing-card.featured {
+            background: #1a1a1a;
+            color: white;
+            border-color: #b8860b;
+        }
+        
+        .pricing-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: #b8860b;
+            font-weight: 600;
+        }
+        
+        .pricing-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        
+        .pricing-amount {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            font-size: 16px;
+        }
+        
+        .pricing-card.featured .pricing-features li {
+            border-bottom-color: rgba(255,255,255,0.1);
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .process {
+            background: #fafafa;
+            padding: 100px 0;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .process-step {
+            position: relative;
+        }
+        
+        .process-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 800;
+            color: #b8860b;
+            opacity: 0.2;
+            margin-bottom: 20px;
+        }
+        
+        .process-step h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .process-step p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .final-cta {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+            color: white;
+            text-align: center;
+            padding: 120px 30px;
+        }
+        
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+        
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 50px;
+            opacity: 0.85;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 600px;
+            margin: 60px auto 0;
+        }
+        
+        .contact-method {
+            padding: 40px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .contact-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.6;
+            margin-bottom: 15px;
+        }
+        
+        .contact-value {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .contact-value a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .contact-value a:hover {
+            color: #b8860b;
+        }
+        
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 40px 30px;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .value-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .showcase-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .expertise-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-group {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .showcase-content h3 {
+                font-size: 32px;
+            }
+            
+            .testimonial-quote {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="version-nav">
+        <div class="version-nav-content">
+            <div class="version-label">💎 Version 2: Premium Authority</div>
+            <div class="version-links">
+                <a href="index.html" class="version-link">← All Versions</a>
+                <a href="version1.html" class="version-link">Version 1</a>
+                <a href="version2.html" class="version-link active">Version 2</a>
+                <a href="version3.html" class="version-link">Version 3</a>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">GroundWork<span>—</span>Web</div>
+                <div class="header-cta">
+                    <a href="tel:2708019780">270-801-9780</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-subtitle">Premium Web Design • Limited Quarterly Intake</div>
+            <h1>The Website Your <span class="highlight">Detailing Business</span> Deserves</h1>
+            <p>Elite detailing shops deserve more than template websites. We create strategic digital experiences that position your business above the competition and attract premium clients willing to pay for excellence.</p>
+            
+            <div class="cta-group">
+                <a href="#contact" class="btn btn-primary">Reserve Strategy Session</a>
+                <a href="#pricing" class="btn btn-secondary">View Investment Options</a>
+            </div>
+            
+            <div class="hero-contact">
+                Next Available: This Week • Call <a href="tel:2708019780">270-801-9780</a> or <a href="mailto:cyruswilburn@icloud.com">cyruswilburn@icloud.com</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Why Premium Matters</h2>
+            <p class="section-subtitle">Your website isn't just an expense—it's your most valuable sales asset. The difference between a good site and a great one is measured in bookings, not clicks.</p>
+            
+            <div class="value-grid">
+                <div class="value-item">
+                    <div class="value-icon">🎯</div>
+                    <h3>Strategic Positioning</h3>
+                    <p>We don't just build websites. We position your business to attract the clients who value quality and are willing to pay for expertise.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🏆</div>
+                    <h3>Industry Expertise</h3>
+                    <p>We exclusively serve automotive detailing businesses. We understand ceramic coatings, paint correction, and what makes your customers buy.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">📈</div>
+                    <h3>Conversion Science</h3>
+                    <p>Beautiful design that doesn't convert is expensive decoration. Every element is engineered to guide visitors toward booking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <div class="container">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <h3>Results That Speak for Themselves</h3>
+                    <p>We measure success by one metric: Did your investment generate more revenue than it cost? Everything else is vanity.</p>
+                    <p>Our sites don't just look premium—they perform at a premium level. Faster load times, higher conversion rates, and clients who actually book.</p>
+                    
+                    <div class="showcase-stat">
+                        <div class="stat-box">
+                            <div class="stat-number">340%</div>
+                            <div class="stat-label">Avg. Booking Increase</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">1.6s</div>
+                            <div class="stat-label">Load Time</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-visual">
+                    <div class="showcase-visual-placeholder">📊</div>
+                    <div class="showcase-visual-text">Premium performance metrics</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="expertise">
+        <div class="container">
+            <h2 class="section-title">What Makes Us Different</h2>
+            <p class="section-subtitle">Anyone can build a website. We build revenue-generating assets.</p>
+            
+            <div class="expertise-grid">
+                <div class="expertise-content">
+                    <h4>We Only Serve Detailers</h4>
+                    <ul class="expertise-list">
+                        <li>Deep understanding of ceramic coating sales cycles</li>
+                        <li>Service-specific landing pages that rank</li>
+                        <li>Pricing psychology for high-ticket services</li>
+                        <li>Mobile-first for lot and parking lot bookings</li>
+                        <li>Integration with scheduling systems detailers actually use</li>
+                    </ul>
+                </div>
+                <div class="expertise-highlight">
+                    <h4>The GroundWork Difference</h4>
+                    <p>Most web designers work with anyone who pays. Restaurants, lawyers, gyms—it doesn't matter. They start from zero every time.</p>
+                    <p>We know exactly what works for detailing shops because that's all we do. We know your customers' objections, buying triggers, and what makes them choose you over the guy charging $100 less.</p>
+                    <p><strong>This specialization is why we command premium rates—and why our clients see premium results.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    "Our old site made us look like every other detailer. GroundWork repositioned us as the premium choice. We raised prices 30% and saw bookings increase, not decrease. The site literally paid for itself in the first month."
+                </div>
+                <div class="testimonial-author">Michael Rodriguez</div>
+                <div class="testimonial-role">Owner, Apex Auto Aesthetics</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    "I was skeptical about the cost. But Cyrus understands the detailing business better than any developer I've talked to. The booking system alone saves me 10 hours a week of phone tag."
+                </div>
+                <div class="testimonial-author">Jennifer Walsh</div>
+                <div class="testimonial-role">Elite Ceramic Coatings</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    "The premium positioning was exactly what we needed. We raised our prices 30% and bookings actually increased. The site attracts clients who appreciate quality and are willing to invest in their vehicles."
+                </div>
+                <div class="testimonial-author">David Chen</div>
+                <div class="testimonial-role">Owner, Concours Detail Studio</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">
+                    "Worth every penny. The site doesn't just look premium - it converts premium clients. Our average ticket went from $180 to $650 because we're attracting a different caliber of customer now."
+                </div>
+                <div class="testimonial-author">Marcus Williams</div>
+                <div class="testimonial-role">Premium Auto Aesthetics</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Investment Tiers</h2>
+            <p class="section-subtitle">Choose the level that matches your ambition. All packages include our signature detailing-specific features.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-label">Foundation</div>
+                    <div class="pricing-title">Professional</div>
+                    <div class="pricing-amount">$4,500</div>
+                    <ul class="pricing-features">
+                        <li>Custom 6-8 page design</li>
+                        <li>Mobile-optimized experience</li>
+                        <li>Basic booking integration</li>
+                        <li>Service-specific pages</li>
+                        <li>Before/after gallery system</li>
+                        <li>SEO foundation</li>
+                        <li>2-3 week delivery</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary" style="width: 100%; text-align: center;">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-label">Most Popular</div>
+                    <div class="pricing-title">Premium</div>
+                    <div class="pricing-amount">$8,500</div>
+                    <ul class="pricing-features">
+                        <li>Custom 10+ page design system</li>
+                        <li>Advanced booking & automation</li>
+                        <li>Multiple service landing pages</li>
+                        <li>Complete SEO strategy</li>
+                        <li>Review integration & showcase</li>
+                        <li>Email & SMS automation</li>
+                        <li>Performance optimization</li>
+                        <li>3 months support included</li>
+                        <li>3-4 week delivery</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Get Started</a>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 40px; font-size: 18px; color: #666;">
+                Payment plans available. Custom enterprise solutions for multi-location operations available upon request.
+            </p>
+        </div>
+    </section>
+
+    <section class="process" id="process">
+        <div class="container">
+            <h2 class="section-title">Our Process</h2>
+            <p class="section-subtitle">Transparent, efficient, and designed to minimize your time investment.</p>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">01</div>
+                    <h4>Discovery Call</h4>
+                    <p>30-minute consultation. We audit your current site, discuss your goals, and determine if we're the right fit.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">02</div>
+                    <h4>Strategy & Proposal</h4>
+                    <p>Custom plan tailored to your business. Clear deliverables, timeline, and investment. No surprises.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">03</div>
+                    <h4>Design & Build</h4>
+                    <p>We handle everything. You review progress at key milestones and provide feedback. We iterate until it's perfect.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">04</div>
+                    <h4>Launch & Optimize</h4>
+                    <p>Smooth transition. Training provided. Ongoing support available. We're invested in your success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Why Invest More?</h2>
+            <div style="max-width: 900px; margin: 0 auto; background: #fafafa; padding: 50px; border-radius: 8px; border-left: 4px solid #b8860b;">
+                <h4 style="font-size: 24px; margin-bottom: 20px;">The Premium Difference</h4>
+                <p style="font-size: 18px; line-height: 1.8; color: #666; margin-bottom: 15px;">
+                    Cheap templates attract price shoppers. Premium design attracts quality clients.
+                </p>
+                <p style="font-size: 18px; line-height: 1.8; color: #666; margin-bottom: 15px;">
+                    Our clients don't compete on price because their websites position them differently. They charge 30-50% more than competitors and book more consistently because they attract customers who value expertise over cost.
+                </p>
+                <p style="font-size: 18px; line-height: 1.8; color: #666;">
+                    <strong>The math is simple:</strong> If a premium site helps you book just one extra $2,000 ceramic coating per month, it pays for itself in 4 months. Most clients see that within 30 days.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2>Ready to Elevate Your Business?</h2>
+            <p>Limited availability • Next intake window closing soon</p>
+            
+            <div class="cta-group">
+                <a href="tel:2708019780" class="btn btn-primary">Reserve Your Spot: 270-801-9780</a>
+                <a href="mailto:cyruswilburn@icloud.com?subject=Premium Website Strategy Session" class="btn btn-secondary">Request Strategy Session</a>
+            </div>
+            
+            <p style="font-size: 14px; margin-top: 40px; opacity: 0.7;">
+                💯 Premium Guarantee: Your site will position you above competitors or we refund 100%. We stand behind our work.
+            </p>
+            
+            <div class="contact-grid">
+                <div class="contact-method">
+                    <div class="contact-label">Phone or Text</div>
+                    <div class="contact-value"><a href="tel:2708019780">270-801-9780</a></div>
+                </div>
+                <div class="contact-method">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value"><a href="mailto:cyruswilburn@icloud.com">cyruswilburn@icloud.com</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GroundWork - Web. Premium websites for automotive detailing businesses.</p>
+        </div>
+    </footer>
+</body>
+</html>
