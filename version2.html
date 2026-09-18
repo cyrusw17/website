@@ -1,589 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium websites for elite automotive detailing businesses. Quality design for quality work.">
-    <title>GroundWork Web — Premium Detailing Websites</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            color: #2d3748;
-            background: #fdfcfb;
-        }
-        
-        .nav-bar {
-            background: #2d3748;
-            color: white;
-            padding: 12px 20px;
-            font-size: 14px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .nav-bar a {
-            color: white;
-            text-decoration: none;
-            margin-right: 16px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #c79081 0%, #dfa579 100%);
-            color: #2d3748;
-            padding: 80px 20px 60px;
-            text-align: center;
-        }
-        
-        .quality-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.9);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 24px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        h1 {
-            font-size: 52px;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 24px;
-        }
-        
-        .lead {
-            font-size: 22px;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .cta-group {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 18px 36px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.2s;
-            min-height: 56px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .btn-primary {
-            background: #2d3748;
-            color: white;
-            box-shadow: 0 4px 14px rgba(45,55,72,0.4);
-        }
-        
-        .btn-primary:hover {
-            background: #1a202c;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(45,55,72,0.5);
-        }
-        
-        .btn-secondary {
-            background: white;
-            color: #2d3748;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-        }
-        
-        .btn-secondary:hover {
-            background: #f7fafc;
-            transform: translateY(-2px);
-        }
-        
-        /* Stats */
-        .stats-bar {
-            background: white;
-            padding: 60px 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 48px;
-            font-weight: 800;
-            color: #c79081;
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 15px;
-            color: #718096;
-            margin-top: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-        
-        /* Sections */
-        section {
-            padding: 80px 20px;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        h2 {
-            font-size: 42px;
-            font-weight: 800;
-            color: #1a202c;
-            margin-bottom: 16px;
-        }
-        
-        .section-subtitle {
-            font-size: 20px;
-            color: #718096;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        /* Value Props */
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-        
-        .value-card {
-            background: white;
-            padding: 48px 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            transition: all 0.3s;
-        }
-        
-        .value-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-        }
-        
-        .value-card h3 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1a202c;
-            margin-bottom: 16px;
-        }
-        
-        .value-card p {
-            color: #4a5568;
-            line-height: 1.8;
-            font-size: 17px;
-        }
-        
-        /* Testimonials */
-        .testimonial-card {
-            background: white;
-            padding: 48px;
-            border-radius: 12px;
-            margin-bottom: 32px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-        }
-        
-        .stars {
-            color: #f6ad55;
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .testimonial-text {
-            font-size: 22px;
-            line-height: 1.7;
-            color: #2d3748;
-            margin-bottom: 28px;
-            font-style: italic;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        
-        .author-avatar {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, #c79081 0%, #dfa579 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 20px;
-        }
-        
-        .author-info h4 {
-            font-weight: 700;
-            color: #1a202c;
-            margin-bottom: 4px;
-        }
-        
-        .author-info p {
-            color: #718096;
-            font-size: 14px;
-        }
-        
-        /* Pricing */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 32px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .pricing-card {
-            background: white;
-            padding: 48px 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            text-align: center;
-            transition: all 0.3s;
-            border: 3px solid transparent;
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-            border-color: #c79081;
-        }
-        
-        .pricing-card h3 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1a202c;
-            margin-bottom: 16px;
-        }
-        
-        .price {
-            font-size: 56px;
-            font-weight: 800;
-            color: #c79081;
-            margin-bottom: 32px;
-        }
-        
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 32px;
-            text-align: left;
-        }
-        
-        .pricing-features li {
-            padding: 12px 0;
-            color: #4a5568;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .pricing-features li:before {
-            content: "✓";
-            color: #48bb78;
-            font-weight: 700;
-            font-size: 20px;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #c79081 0%, #dfa579 100%);
-            color: #2d3748;
-            text-align: center;
-            padding: 80px 20px;
-        }
-        
-        .cta-section h2 {
-            color: #2d3748;
-            margin-bottom: 24px;
-        }
-        
-        .cta-section p {
-            font-size: 20px;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-        
-        /* Trust Badges */
-        .trust-section {
-            background: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            max-width: 900px;
-            margin: 40px auto 0;
-        }
-        
-        .trust-item {
-            text-align: center;
-        }
-        
-        .trust-icon {
-            font-size: 48px;
-            margin-bottom: 16px;
-        }
-        
-        .trust-text {
-            font-weight: 600;
-            color: #2d3748;
-        }
-        
-        /* Mobile Bottom Bar */
-        .mobile-bottom-bar {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            padding: 16px 20px;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
-            z-index: 100;
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 36px;
-            }
-            
-            h2 {
-                font-size: 32px;
-            }
-            
-            .value-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .mobile-bottom-bar {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 12px;
-            }
-            
-            body {
-                padding-bottom: 90px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Monthly website plans built specifically for automotive detailing businesses. Website, hosting, SEO, and support — all in one flat monthly price.">
+<title>GroundWork Web — Pick a Plan, Grow Your Bookings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-    <nav class="nav-bar">
-        <a href="index.html">← All Versions</a>
-        <a href="version1.html">V1</a>
-        <strong>Version 2</strong>
-        <a href="version3.html">V3</a>
-    </nav>
-    
-    <header class="header">
-        <div class="container">
-            <div class="quality-badge">Premium Quality Since 2021</div>
-            <h1>Websites That Match the Quality of Your Work</h1>
-            <p class="lead">Elite detailing shops deserve elite websites. Custom design, strategic positioning, and results that justify the investment.</p>
-            
-            <div class="cta-group">
-                <a href="tel:2708019780" class="btn btn-primary">📞 Schedule Consultation</a>
-                <a href="mailto:cyruswilburn@icloud.com?subject=Premium Website Inquiry" class="btn btn-secondary">View Our Work</a>
-            </div>
-        </div>
-    </header>
-    
-    <div class="stats-bar">
-        <div class="container">
-            <div class="stats-grid">
-                <div>
-                    <span class="stat-number">$8.5K</span>
-                    <span class="stat-label">Average Project</span>
-                </div>
-                <div>
-                    <span class="stat-number">127</span>
-                    <span class="stat-label">Clients Served</span>
-                </div>
-                <div>
-                    <span class="stat-number">340%</span>
-                    <span class="stat-label">Avg. ROI</span>
-                </div>
-            </div>
-        </div>
+<body class="theme-green">
+
+<div class="demo-bar">
+  Viewing Offer 2 of 3
+  <a href="index.html">All Offers</a>
+  <a href="version1.html">Own It Outright</a>
+  <a href="version2.html" class="current">Growth Plans</a>
+  <a href="version3.html">Results Guarantee</a>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo"><span class="logo-dot"></span>GroundWork Web</div>
+    <div class="header-cta">
+      <a href="tel:2708019780" class="header-phone">270-801-9780</a>
+      <a href="#contact" class="btn btn-primary btn-sm">Text Us</a>
     </div>
-    
-    <section>
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Premium Positioning Matters</h2>
-                <p class="section-subtitle">Cheap templates attract price shoppers. Quality design attracts quality clients who value expertise.</p>
-            </div>
-            
-            <div class="value-grid">
-                <div class="value-card">
-                    <h3>Command Premium Prices</h3>
-                    <p>Our clients charge 30-50% more than competitors and stay booked. Your website positions you as the premium choice, not the cheap option.</p>
-                </div>
-                
-                <div class="value-card">
-                    <h3>Stand Apart</h3>
-                    <p>Custom design that looks nothing like template sites. Your brand, your story, your positioning—all unique to you.</p>
-                </div>
-                
-                <div class="value-card">
-                    <h3>Strategic Approach</h3>
-                    <p>We don't just build sites. We position your business to attract customers willing to pay for quality work.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section style="background: white;">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Premium Clients Say</h2>
-                <p class="section-subtitle">Results that justify the investment</p>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"GroundWork repositioned us as the premium choice. We raised prices 30% and bookings actually increased. The site paid for itself in the first month."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">MR</div>
-                    <div class="author-info">
-                        <h4>Michael Rodriguez</h4>
-                        <p>Apex Auto Aesthetics, Atlanta GA</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"The premium positioning was exactly what we needed. The site attracts clients who appreciate quality and are willing to invest in their vehicles."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">DC</div>
-                    <div class="author-info">
-                        <h4>David Chen</h4>
-                        <p>Concours Detail Studio, Los Angeles CA</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section style="background: #fdfcfb;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Investment Tiers</h2>
-                <p class="section-subtitle">Quality design for shops serious about growth</p>
-            </div>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Professional</h3>
-                    <div class="price">$4,500</div>
-                    <ul class="pricing-features">
-                        <li>6-8 custom pages</li>
-                        <li>Premium design</li>
-                        <li>Mobile excellence</li>
-                        <li>Booking system</li>
-                        <li>SEO foundation</li>
-                        <li>3-week delivery</li>
-                    </ul>
-                    <a href="mailto:cyruswilburn@icloud.com?subject=Professional Package" class="btn btn-secondary" style="width: 100%;">Get Started</a>
-                </div>
-                
-                <div class="pricing-card">
-                    <h3>Premium</h3>
-                    <div class="price">$8,500</div>
-                    <ul class="pricing-features">
-                        <li>10+ custom pages</li>
-                        <li>Complete brand system</li>
-                        <li>Full SEO strategy</li>
-                        <li>Advanced automation</li>
-                        <li>3 months support</li>
-                        <li>4-week delivery</li>
-                    </ul>
-                    <a href="mailto:cyruswilburn@icloud.com?subject=Premium Package" class="btn btn-primary" style="width: 100%;">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <div class="trust-section">
-        <div class="container">
-            <h3 style="font-size: 24px; color: #1a202c; margin-bottom: 40px;">Why Choose GroundWork?</h3>
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="trust-icon">🏆</div>
-                    <div class="trust-text">127 Premium<br>Clients</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">💰</div>
-                    <div class="trust-text">340% Average<br>ROI</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">⚡</div>
-                    <div class="trust-text">3-4 Week<br>Delivery</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">💯</div>
-                    <div class="trust-text">Money-Back<br>Guarantee</div>
-                </div>
-            </div>
-        </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">✦ For Growing Detailing Businesses</div>
+    <h1>Pick a Plan.<br>Grow Your Bookings.</h1>
+    <p class="lead mx-auto">Straightforward monthly plans built specifically for detailing shops — website, hosting, SEO, and support, all handled for one flat price. No contracts, cancel anytime.</p>
+    <div class="hero-ctas">
+      <a href="sms:2708019780?&body=GROWTH" class="btn btn-primary">📱 Text GROWTH to 270-801-9780</a>
+      <a href="#pricing" class="btn btn-secondary">See Plans</a>
     </div>
-    
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Elevate Your Business?</h2>
-            <p>Let's discuss how premium positioning can transform your bookings.</p>
-            
-            <div class="cta-group">
-                <a href="tel:2708019780" class="btn btn-primary">📞 Call: 270-801-9780</a>
-                <a href="mailto:cyruswilburn@icloud.com?subject=Premium Consultation" class="btn btn-secondary">Request Consultation</a>
-            </div>
-        </div>
-    </section>
-    
-    <div class="mobile-bottom-bar">
-        <a href="tel:2708019780" class="btn btn-primary" style="width: 100%;">Call Now</a>
-        <a href="mailto:cyruswilburn@icloud.com" class="btn btn-secondary" style="width: 100%;">Email Us</a>
+    <p class="hero-trust"><strong>Month-to-month</strong> · No long-term contract · Cancel anytime</p>
+  </div>
+</section>
+
+<section class="section-dark" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Plans</span>
+      <h2>Three plans. Pick what fits your shop today.</h2>
+      <p>Upgrade or downgrade anytime as your business grows — no penalties, no long-term contract.</p>
     </div>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-caption">Starter</div>
+        <h3>New & small shops</h3>
+        <div class="price-amount">$99<span>/mo</span></div>
+        <ul class="price-features">
+          <li>3-page website</li>
+          <li>Mobile-optimized design</li>
+          <li>Contact form</li>
+          <li>Hosting & SSL included</li>
+          <li>Email support</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary btn-block" style="background:white;">Choose Starter</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-card-badge">Most Popular</div>
+        <div class="price-caption">Growth</div>
+        <h3>Shops ready to scale</h3>
+        <div class="price-amount">$199<span>/mo</span></div>
+        <ul class="price-features">
+          <li>6–8 page website</li>
+          <li>Online booking system</li>
+          <li>Service-specific SEO pages</li>
+          <li>Review & testimonial integration</li>
+          <li>Monthly content updates</li>
+          <li>Priority email & text support</li>
+        </ul>
+        <a href="#contact" class="btn btn-accent btn-block">Choose Growth</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-caption">Pro</div>
+        <h3>Multi-location & fleets</h3>
+        <div class="price-amount">$349<span>/mo</span></div>
+        <ul class="price-features">
+          <li>10+ page website</li>
+          <li>Multi-location support</li>
+          <li>Ad campaign landing pages</li>
+          <li>Quarterly strategy calls</li>
+          <li>Priority support & fast turnarounds</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary btn-block" style="background:white;">Choose Pro</a>
+      </div>
+    </div>
+
+    <div class="two-col-list">
+      <div>
+        <div class="list-col-label">Included In Every Plan</div>
+        <ul class="check-list">
+          <li>Custom mobile-first design</li>
+          <li>Hosting, SSL & security monitoring</li>
+          <li>Ongoing maintenance & updates</li>
+          <li>Unlimited technical support</li>
+        </ul>
+      </div>
+      <div>
+        <div class="list-col-label">Terms</div>
+        <ul class="check-list dot-list">
+          <li>Month-to-month billing, no contract</li>
+          <li>Cancel anytime with 30 days notice</li>
+          <li>Switch plans as your shop grows</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Why This Exists</span>
+      <h2>A website isn't a one-and-done project.</h2>
+      <p class="mx-auto">Detailing trends change, Google's algorithm changes, and things break. We built these plans so your site keeps working for you long after launch — without a big upfront bill or getting abandoned by a freelancer.</p>
+    </div>
+    <div class="two-col-list" style="margin-top:0;">
+      <div>
+        <ul class="check-list on-light">
+          <li>Ongoing SEO, not a one-time setup</li>
+          <li>Real humans keep your site updated</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="check-list on-light">
+          <li>Grow into a bigger plan as you scale</li>
+          <li>No surprise redesign bill every few years</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-cream">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">What You Get Every Month</span>
+      <h2>Everything to look professional and win more bookings.</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card"><div class="card-icon">01</div><h3>Custom design</h3><p>Built around your brand and services — not a one-size-fits-all template.</p></div>
+      <div class="card"><div class="card-icon">02</div><h3>Mobile-first</h3><p>Most customers search for detailers from their phone. We build for them first.</p></div>
+      <div class="card"><div class="card-icon">03</div><h3>Service SEO pages</h3><p>Dedicated pages for ceramic coating, PPF, mobile detailing — built to rank.</p></div>
+      <div class="card"><div class="card-icon">04</div><h3>Booking system</h3><p>Capture leads 24/7, even while your shop is closed.</p></div>
+      <div class="card"><div class="card-icon">05</div><h3>Hosting & security</h3><p>Fast, secure hosting with SSL and monitoring — handled for you.</p></div>
+      <div class="card"><div class="card-icon">06</div><h3>Ongoing support</h3><p>Unlimited technical support and monthly content updates included.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">How It Works</span>
+      <h2>Simple, from first text to launch.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div><h3>Text us</h3><p>Send "GROWTH" to 270-801-9780 — no phone tag, no pressure.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div><h3>Pick your plan</h3><p>Starter, Growth, or Pro — choose what fits your shop today.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div><h3>Strategy</h3><p>We map your pages and messaging around what actually books jobs.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div><h3>Build</h3><p>Your site comes together in 2–4 weeks with clear checkpoints.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div><h3>Launch & grow</h3><p>We go live and keep improving your site every month after.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Us vs. DIY & Freelancers</span>
+      <h2>Built for the long run, not just launch day.</h2>
+    </div>
+    <div class="compare-table">
+      <div class="compare-row compare-head">
+        <div>&nbsp;</div>
+        <div>DIY / Freelancer</div>
+        <div>GroundWork Web</div>
+      </div>
+      <div class="compare-row">
+        <div>Ongoing SEO</div>
+        <div class="col-them">Rarely included</div>
+        <div class="col-us">Included every month</div>
+      </div>
+      <div class="compare-row">
+        <div>Support after launch</div>
+        <div class="col-them">Freelancer disappears</div>
+        <div class="col-us">Unlimited support</div>
+      </div>
+      <div class="compare-row">
+        <div>Detailing expertise</div>
+        <div class="col-them">Generalist</div>
+        <div class="col-us">Detailing-specialist</div>
+      </div>
+      <div class="compare-row">
+        <div>Contract</div>
+        <div class="col-them">Varies</div>
+        <div class="col-us">Month-to-month</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">No Gimmicks</span>
+      <h2>Just honest, upfront work.</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-item"><h3>Transparent pricing</h3><p>Three plans, three prices. Nothing hidden.</p></div>
+      <div class="trust-item"><h3>No long-term contract</h3><p>Month-to-month billing, cancel anytime.</p></div>
+      <div class="trust-item"><h3>Real ongoing support</h3><p>Unlimited technical support included in every plan.</p></div>
+      <div class="trust-item"><h3>Direct communication</h3><p>You talk to the person building your site. No call centers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-cream">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Is there a contract?</summary>
+        <p>No. All plans are month-to-month. Cancel anytime with 30 days notice — no penalties or early termination fees.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I switch plans later?</summary>
+        <p>Yes, upgrade or downgrade anytime as your business needs change. We'll prorate the difference.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if I want to cancel?</summary>
+        <p>Just let us know 30 days in advance. We'll export your content so you can take it with you — no hard feelings.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you handle content updates?</summary>
+        <p>Yes, the Growth and Pro plans include monthly content updates. Starter plan updates are billed at a small hourly rate.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long does launch take?</summary>
+        <p>Typically 2–4 weeks from kickoff, depending on your plan and how quickly you provide photos and feedback.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Get Started</span>
+      <h2>Ready to pick your plan?</h2>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-text-cta">
+        <h3>Text us — on your schedule</h3>
+        <p>No pressure, no meetings required upfront. Send "GROWTH" and we'll reply as soon as we can.</p>
+        <a href="sms:2708019780?&body=GROWTH" class="btn btn-accent btn-block" style="margin-bottom:14px;">📱 Text GROWTH to 270-801-9780</a>
+        <a href="tel:2708019780" class="btn btn-outline-light btn-block">📞 Call 270-801-9780</a>
+      </div>
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="f-name">Your name</label>
+          <input type="text" id="f-name" required>
+        </div>
+        <div class="form-group">
+          <label for="f-business">Business name</label>
+          <input type="text" id="f-business" required>
+        </div>
+        <div class="form-group">
+          <label for="f-phone">Phone number</label>
+          <input type="tel" id="f-phone" required>
+        </div>
+        <div class="form-group">
+          <label for="f-message">Which plan interests you?</label>
+          <textarea id="f-message" placeholder="Starter, Growth, Pro, or not sure yet..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="logo"><span class="logo-dot"></span>GroundWork Web</div>
+        <p>Monthly website plans built exclusively for automotive detailing businesses. Website, hosting, SEO, and support — all in one.</p>
+      </div>
+      <div class="footer-contact">
+        <a href="tel:2708019780">📞 270-801-9780</a>
+        <a href="mailto:cyruswilburn@icloud.com">✉️ cyruswilburn@icloud.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 GroundWork Web. All rights reserved.</span>
+      <span>Louisville, KY</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta-bar">
+  <a href="sms:2708019780?&body=GROWTH" class="btn btn-accent">Text Us</a>
+  <a href="tel:2708019780" class="btn btn-secondary">Call Now</a>
+</div>
+
+<script src="assets/script.js"></script>
 </body>
 </html>
