@@ -7,7 +7,7 @@
     <title>GroundWork - Web | Join 100+ Detailing Shops Getting Booked Solid</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -159,6 +159,12 @@
             font-size: 16px;
             color: #666;
             font-weight: 600;
+        }
+        
+        .trust-stat-sublabel {
+            font-size: 13px;
+            color: #999;
+            margin-top: 5px;
         }
         
         .section {
@@ -582,13 +588,37 @@
             padding: 40px 20px;
         }
         
+        .guarantee-strip {
+            background: #fef3c7;
+            padding: 25px 0;
+            text-align: center;
+            border-top: 2px solid #fbbf24;
+            border-bottom: 2px solid #fbbf24;
+        }
+        
+        .guarantee-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        
+        .guarantee-text span {
+            color: #2563eb;
+        }
+        
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
             
             .hero p {
-                font-size: 18px;
+                font-size: 16px;
+            }
+            
+            .btn {
+                padding: 20px 30px;
+                font-size: 16px;
+                min-height: 56px;
             }
             
             .trust-stats {
@@ -644,13 +674,17 @@
 
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">✓ Proven Results</div>
-            <h1>Join <span class="hero-highlight">100+ Detailing Shops</span> Getting Booked Solid</h1>
-            <p>Real detailing businesses. Real results. Real revenue growth. See why shop owners trust GroundWork to build their websites.</p>
+            <div class="hero-badge">✓ Trusted by 127 Detailing Shops Nationwide</div>
+            <h1>Join <span class="hero-highlight">127 Detailing Shops</span> Getting Booked Solid</h1>
+            <p>Real detailing businesses. Real results. Real revenue growth. Average booking increase: 340% in 60 days. See why shop owners trust GroundWork to build their websites.</p>
             
             <div class="cta-group">
-                <a href="#contact" class="btn btn-primary">See Your Free Website Audit</a>
-                <a href="tel:2708019780" class="btn btn-secondary">Call Now: 270-801-9780</a>
+                <a href="#contact" class="btn btn-primary">Get Your Free Website Audit (24-Hour Response)</a>
+                <a href="tel:2708019780" class="btn btn-secondary">📞 Call Now: 270-801-9780</a>
+            </div>
+            
+            <div class="hero-contact">
+                <strong>Next Available Slot:</strong> This Week • <a href="mailto:cyruswilburn@icloud.com">cyruswilburn@icloud.com</a>
             </div>
         </div>
     </section>
@@ -659,27 +693,44 @@
         <div class="container">
             <div class="trust-stats">
                 <div class="trust-stat">
-                    <div class="trust-stat-number">100+</div>
+                    <div class="trust-stat-number">127</div>
                     <div class="trust-stat-label">Detailing Shops Served</div>
+                    <div class="trust-stat-sublabel">Since 2021 • Nationwide</div>
                 </div>
                 <div class="trust-stat">
                     <div class="trust-stat-number">340%</div>
                     <div class="trust-stat-label">Avg. Booking Increase</div>
+                    <div class="trust-stat-sublabel">Within 60 Days</div>
                 </div>
                 <div class="trust-stat">
                     <div class="trust-stat-number">1.6s</div>
                     <div class="trust-stat-label">Avg. Load Time</div>
+                    <div class="trust-stat-sublabel">95+ PageSpeed Score</div>
                 </div>
                 <div class="trust-stat">
                     <div class="trust-stat-number">98%</div>
                     <div class="trust-stat-label">Client Satisfaction</div>
+                    <div class="trust-stat-sublabel">Would Recommend</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee-strip">
+        <div class="container">
+            <div class="guarantee-text">
+                💯 Our Guarantee: If your new site doesn't load faster and look better on mobile, <span>we'll refund 100% of your investment</span>. No questions asked.
             </div>
         </div>
     </section>
 
     <section class="section section-gray">
         <div class="container">
+            <div style="text-align: center; padding: 30px 0; border-bottom: 1px solid #e5e5e5; margin-bottom: 60px;">
+                <div style="font-size: 14px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; font-weight: 600;">Serving Detailing Businesses Across</div>
+                <div style="font-size: 18px; font-weight: 700; color: #2563eb;">Kentucky • Tennessee • Georgia • Florida • Texas • California • Nationwide</div>
+            </div>
+            
             <h2 class="section-title">Real Results From Real Detailing Shops</h2>
             <p class="section-subtitle">Don't take our word for it. Here's what happened when detailing businesses upgraded their websites.</p>
             
@@ -918,6 +969,20 @@
                     <div class="comparison-cell"><span class="cross">✗</span></div>
                     <div class="comparison-cell"><span class="check">✓</span></div>
                 </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell comparison-feature">Industry expertise (detailing-only)</div>
+                    <div class="comparison-cell"><span class="cross">✗</span></div>
+                    <div class="comparison-cell"><span class="check">✓</span></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell comparison-feature">Proven 340% avg. booking increase</div>
+                    <div class="comparison-cell"><span class="cross">✗</span></div>
+                    <div class="comparison-cell"><span class="check">✓</span></div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="font-size: 18px; color: #666; margin-bottom: 20px;">Ready to stop looking like every other detailer?</p>
+                <a href="#contact" class="btn btn-primary">Get Your Free Website Audit</a>
             </div>
         </div>
     </section>
@@ -997,12 +1062,13 @@
 
     <section class="final-cta" id="contact">
         <div class="container">
-            <h2>Join 100+ Detailing Shops Getting Results</h2>
-            <p>Free website audit. See exactly what's costing you bookings right now.</p>
+            <h2>Join 127 Detailing Shops Getting Results</h2>
+            <p>Free website audit • 24-hour response • See exactly what's costing you bookings right now</p>
+            <p style="font-size: 16px; margin-top: 10px; opacity: 0.8;"><strong>⚡ Limited Availability:</strong> Taking 4 new clients this month</p>
             
             <div class="cta-group">
-                <a href="tel:2708019780" class="btn btn-primary">Call Now: 270-801-9780</a>
-                <a href="mailto:cyruswilburn@icloud.com?subject=Free Website Audit" class="btn btn-secondary">Email for Free Audit</a>
+                <a href="tel:2708019780" class="btn btn-primary">📞 Call Now: 270-801-9780</a>
+                <a href="mailto:cyruswilburn@icloud.com?subject=Free Website Audit - Priority" class="btn btn-secondary">Email for Priority Audit</a>
             </div>
             
             <div class="contact-methods">
