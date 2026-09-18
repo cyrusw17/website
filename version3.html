@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proven websites for automotive detailing shops. 127 shops served, 340% average booking increase, real results.">
+    <meta name="description" content="Proven websites for automotive detailing businesses. 127 shops served, 340% average increase, real results you can verify.">
     <title>GroundWork Web — Proven Detailing Websites</title>
     <style>
         * {
@@ -12,22 +12,16 @@
             box-sizing: border-box;
         }
         
-        html {
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            color: #111;
-            background: #fff;
-            padding-bottom: 80px;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #f7fafc;
         }
         
-        /* Navigation */
-        .version-nav {
-            background: #111;
-            color: #fff;
+        .nav-bar {
+            background: #2b6cb0;
+            color: white;
             padding: 12px 20px;
             font-size: 14px;
             position: sticky;
@@ -35,532 +29,674 @@
             z-index: 100;
         }
         
-        .version-nav a {
-            color: #fff;
+        .nav-bar a {
+            color: white;
             text-decoration: none;
             margin-right: 16px;
         }
         
-        /* Layout */
         .container {
-            max-width: 700px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
         /* Header */
-        header {
-            padding: 32px 20px;
-            border-bottom: 1px solid #e0e0e0;
+        .header {
+            background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
         }
         
-        .logo {
-            font-size: 20px;
-            font-weight: 600;
-        }
-        
-        /* Hero */
-        .hero {
-            padding: 48px 20px;
+        .proof-badge {
+            display: inline-block;
+            background: #48bb78;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 24px;
         }
         
         h1 {
-            font-size: 36px;
+            font-size: 50px;
+            font-weight: 800;
             line-height: 1.2;
-            font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
         
         .lead {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 28px;
-            color: #444;
+            font-size: 22px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .badge {
-            display: inline-block;
-            padding: 6px 12px;
-            background: #111;
-            color: #fff;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-        
-        /* Stats Grid */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1px;
-            background: #e0e0e0;
-            margin: 40px 0;
-        }
-        
-        .stat {
-            background: #fff;
-            padding: 20px 16px;
-            text-align: center;
-        }
-        
-        .stat-num {
-            font-size: 28px;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 4px;
-        }
-        
-        .stat-label {
-            font-size: 12px;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        /* Sections */
-        section {
-            padding: 48px 20px;
-        }
-        
-        h2 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-        
-        h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-        
-        p {
-            margin-bottom: 16px;
-            line-height: 1.6;
-        }
-        
-        /* Lists */
-        ul {
-            list-style: none;
-            margin: 20px 0;
-        }
-        
-        li {
-            padding: 14px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        
-        li:last-child {
-            border-bottom: none;
-        }
-        
-        /* Results */
-        .result-card {
-            margin: 24px 0;
-            padding: 24px;
-            background: #fafafa;
-            border-left: 3px solid #111;
-        }
-        
-        .result-num {
-            font-size: 40px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        
-        .result-label {
-            font-size: 15px;
-            color: #666;
-            margin-bottom: 12px;
-        }
-        
-        .result-detail {
-            font-size: 14px;
-            color: #888;
-        }
-        
-        /* Testimonials */
-        .testimonial {
-            margin: 32px 0;
-            padding: 28px;
-            background: #fafafa;
-        }
-        
-        .testimonial-text {
-            font-size: 17px;
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-        
-        .testimonial-author {
-            font-weight: 700;
-            font-size: 14px;
-        }
-        
-        .testimonial-role {
-            font-size: 13px;
-            color: #666;
-        }
-        
-        /* Comparison */
-        .comparison {
-            margin: 32px 0;
-        }
-        
-        .comparison-row {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            padding: 16px 12px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        
-        .comparison-header {
-            background: #111;
-            color: #fff;
-            font-weight: 700;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .comparison-cell {
-            padding: 0 8px;
-        }
-        
-        .check {
-            color: #059669;
-            font-weight: 700;
-        }
-        
-        .cross {
-            color: #dc2626;
-            font-weight: 700;
-        }
-        
-        /* Pricing */
-        .pricing {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 24px;
-            margin: 32px 0;
-        }
-        
-        .price-card {
-            padding: 32px 24px;
-            border: 2px solid #e0e0e0;
-        }
-        
-        .price {
-            font-size: 42px;
-            font-weight: 700;
-            margin: 16px 0 24px;
-        }
-        
-        /* Bottom Actions */
-        .bottom-actions {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #111;
-            padding: 16px 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            z-index: 50;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-        }
-        
-        /* Buttons */
-        .btn {
-            display: block;
-            padding: 16px 24px;
-            font-size: 15px;
-            font-weight: 700;
-            text-align: center;
-            text-decoration: none;
-            border: 2px solid;
-            cursor: pointer;
-            transition: all 0.15s;
-            min-height: 54px;
+        .cta-group {
             display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 18px 36px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s;
+            min-height: 56px;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
         }
         
         .btn-primary {
-            background: #111;
-            color: #fff;
-            border-color: #111;
+            background: #48bb78;
+            color: white;
+            box-shadow: 0 4px 14px rgba(72,187,120,0.4);
         }
         
         .btn-primary:hover {
-            background: #fff;
-            color: #111;
+            background: #38a169;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(72,187,120,0.5);
         }
         
         .btn-secondary {
-            background: #fff;
-            color: #111;
-            border-color: #fff;
+            background: white;
+            color: #3182ce;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
         }
         
         .btn-secondary:hover {
-            background: transparent;
-            color: #fff;
+            background: #f7fafc;
+            transform: translateY(-2px);
         }
         
-        /* Links */
-        a {
-            color: #111;
-            text-decoration: underline;
+        /* Stats */
+        .stats-bar {
+            background: white;
+            padding: 60px 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
         
-        a:hover {
-            text-decoration: none;
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 40px;
+            text-align: center;
         }
         
-        /* Responsive */
-        @media (min-width: 768px) {
+        .stat-number {
+            font-size: 52px;
+            font-weight: 800;
+            color: #3182ce;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #718096;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 20px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 16px;
+        }
+        
+        .section-subtitle {
+            font-size: 20px;
+            color: #718096;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Results Cards */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+        
+        .result-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #48bb78;
+            transition: all 0.3s;
+        }
+        
+        .result-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .result-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: #48bb78;
+            margin-bottom: 12px;
+        }
+        
+        .result-label {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 8px;
+        }
+        
+        .result-detail {
+            font-size: 15px;
+            color: #718096;
+        }
+        
+        /* Testimonials */
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .stars {
+            color: #f6ad55;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        
+        .testimonial-text {
+            font-size: 20px;
+            line-height: 1.7;
+            color: #2d3748;
+            margin-bottom: 24px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .author-avatar {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .author-info h4 {
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 4px;
+        }
+        
+        .author-info p {
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        /* Comparison Table */
+        .comparison-table {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            padding: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-header {
+            background: #3182ce;
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+        
+        .check {
+            color: #48bb78;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .cross {
+            color: #f56565;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: white;
+            padding: 48px 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .pricing-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 16px;
+        }
+        
+        .price {
+            font-size: 56px;
+            font-weight: 800;
+            color: #3182ce;
+            margin-bottom: 32px;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .pricing-features li:before {
+            content: "✓";
+            color: #48bb78;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #3182ce 0%, #2c5282 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 24px;
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        /* Trust Badges */
+        .trust-section {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 40px auto 0;
+        }
+        
+        .trust-item {
+            text-align: center;
+        }
+        
+        .trust-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .trust-text {
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        /* Mobile Bottom Bar */
+        .mobile-bottom-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 16px 20px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        
+        @media (max-width: 768px) {
             h1 {
-                font-size: 44px;
+                font-size: 36px;
             }
             
-            .stats {
-                grid-template-columns: repeat(4, 1fr);
-            }
-            
-            .pricing {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .bottom-actions {
-                position: static;
-                background: transparent;
-                box-shadow: none;
-                padding: 48px 20px;
-                max-width: 700px;
-                margin: 0 auto;
-            }
-            
-            .btn-secondary {
-                background: #111;
-                color: #fff;
-                border-color: #111;
-            }
-            
-            body {
-                padding-bottom: 0;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
+            h2 {
+                font-size: 32px;
             }
             
             .comparison-row {
-                grid-template-columns: 1fr 40px 40px;
+                grid-template-columns: 2fr 50px 50px;
                 font-size: 14px;
+                padding: 16px 12px;
+            }
+            
+            .mobile-bottom-bar {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            
+            body {
+                padding-bottom: 90px;
             }
         }
     </style>
 </head>
 <body>
-    <nav class="version-nav">
+    <nav class="nav-bar">
         <a href="index.html">← All Versions</a>
         <a href="version1.html">V1</a>
         <a href="version2.html">V2</a>
-        <strong>V3: Proven</strong>
+        <strong>Version 3</strong>
     </nav>
     
-    <header>
-        <div class="logo">GroundWork Web</div>
+    <header class="header">
+        <div class="container">
+            <div class="proof-badge">✓ VERIFIED RESULTS FROM 127 SHOPS</div>
+            <h1>Proven Websites. Real Results. Real Revenue.</h1>
+            <p class="lead">Join 127 detailing shops who transformed their bookings with websites built for results, not just looks.</p>
+            
+            <div class="cta-group">
+                <a href="tel:2708019780" class="btn btn-primary">📞 Call: 270-801-9780</a>
+                <a href="mailto:cyruswilburn@icloud.com?subject=Free Results Analysis" class="btn btn-secondary">See The Proof</a>
+            </div>
+        </div>
     </header>
     
-    <div class="hero">
+    <div class="stats-bar">
         <div class="container">
-            <div class="badge">127 SHOPS NATIONWIDE</div>
-            <h1>Websites for detailing shops with proven results</h1>
-            <p class="lead">Real businesses. Real numbers. Real revenue growth. See why detailing shop owners choose GroundWork.</p>
-        </div>
-    </div>
-    
-    <div class="stats">
-        <div class="stat">
-            <span class="stat-num">127</span>
-            <span class="stat-label">Shops</span>
-        </div>
-        <div class="stat">
-            <span class="stat-num">340%</span>
-            <span class="stat-label">Increase</span>
-        </div>
-        <div class="stat">
-            <span class="stat-num">1.6s</span>
-            <span class="stat-label">Load</span>
-        </div>
-        <div class="stat">
-            <span class="stat-num">98%</span>
-            <span class="stat-label">Satisfied</span>
+            <div class="stats-grid">
+                <div>
+                    <span class="stat-number">127</span>
+                    <span class="stat-label">Shops Served</span>
+                </div>
+                <div>
+                    <span class="stat-number">340%</span>
+                    <span class="stat-label">Avg. Increase</span>
+                </div>
+                <div>
+                    <span class="stat-number">1.6s</span>
+                    <span class="stat-label">Load Time</span>
+                </div>
+                <div>
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Satisfied</span>
+                </div>
+                <div>
+                    <span class="stat-number">21</span>
+                    <span class="stat-label">Days to ROI</span>
+                </div>
+            </div>
         </div>
     </div>
     
     <section>
         <div class="container">
-            <h2>Real results from real shops</h2>
-            
-            <div class="result-card">
-                <div class="result-num">+425%</div>
-                <div class="result-label">Online bookings</div>
-                <div class="result-detail">Precision Auto Detailing, Louisville KY</div>
+            <div class="section-header">
+                <h2>Real Results From Real Shops</h2>
+                <p class="section-subtitle">These aren't made up numbers. These are actual results from detailing businesses like yours.</p>
             </div>
             
-            <div class="result-card">
-                <div class="result-num">+280%</div>
-                <div class="result-label">Ceramic coating leads</div>
-                <div class="result-detail">Elite Shine, Nashville TN</div>
-            </div>
-            
-            <div class="result-card">
-                <div class="result-num">21 days</div>
-                <div class="result-label">Time to ROI</div>
-                <div class="result-detail">Average across all clients</div>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">+425%</div>
+                    <div class="result-label">Online Bookings</div>
+                    <div class="result-detail">Precision Auto Detailing, Louisville KY</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-number">+280%</div>
+                    <div class="result-label">Ceramic Coating Leads</div>
+                    <div class="result-detail">Elite Shine, Nashville TN</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-number">+190%</div>
+                    <div class="result-label">Mobile Bookings</div>
+                    <div class="result-detail">Apex Auto Aesthetics, Atlanta GA</div>
+                </div>
             </div>
         </div>
     </section>
     
-    <section style="background: #fafafa;">
+    <section style="background: white;">
         <div class="container">
-            <h2>What shop owners say</h2>
-            
-            <div class="testimonial">
-                <p class="testimonial-text">"We went from 2-3 online bookings per week to 15-20. The site paid for itself in three weeks."</p>
-                <div class="testimonial-author">Mike Peterson</div>
-                <div class="testimonial-role">Precision Auto Detailing</div>
+            <div class="section-header">
+                <h2>What Shop Owners Say</h2>
+                <p class="section-subtitle">Real testimonials from real detailing business owners</p>
             </div>
             
-            <div class="testimonial">
-                <p class="testimonial-text">"My old site was embarrassing. Now I'm proud to show it. More importantly, my phone rings."</p>
-                <div class="testimonial-author">Sarah Chen</div>
-                <div class="testimonial-role">Elite Shine Mobile Detailing</div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"We went from 2-3 online bookings per week to 15-20. The site paid for itself in three weeks. The ceramic coating page ranks #1 now."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MP</div>
+                    <div class="author-info">
+                        <h4>Mike Peterson</h4>
+                        <p>Precision Auto Detailing, Louisville KY</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="testimonial">
-                <p class="testimonial-text">"The booking system saves me 10 hours per week. Customers book coatings at midnight while I'm asleep."</p>
-                <div class="testimonial-author">David Rodriguez</div>
-                <div class="testimonial-role">Apex Auto Aesthetics</div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I was skeptical about the cost. But I tracked it—the site generated 8 ceramic coating bookings in the first month. That's $16,000 from a $6,500 investment."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AL</div>
+                    <div class="author-info">
+                        <h4>Amanda Lee</h4>
+                        <p>Shine District Mobile Detail, Dallas TX</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="testimonial">
-                <p class="testimonial-text">"I was skeptical about the cost. But I tracked it - the site generated 8 ceramic coating bookings in the first month. That's $16,000 from a $6,500 investment."</p>
-                <div class="testimonial-author">Amanda Lee</div>
-                <div class="testimonial-role">Shine District Mobile Detail</div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The booking system saves me 10+ hours per week. Customers book coatings at midnight while I'm asleep. The ROI is insane."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">DR</div>
+                    <div class="author-info">
+                        <h4>David Rodriguez</h4>
+                        <p>Apex Auto Aesthetics, Atlanta GA</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
     <section>
         <div class="container">
-            <h2>GroundWork vs generic builders</h2>
-            <div class="comparison">
+            <div class="section-header">
+                <h2>GroundWork vs Generic Builders</h2>
+                <p class="section-subtitle">See the difference yourself</p>
+            </div>
+            
+            <div class="comparison-table">
                 <div class="comparison-row comparison-header">
-                    <div class="comparison-cell">Feature</div>
-                    <div class="comparison-cell">Generic</div>
-                    <div class="comparison-cell">GroundWork</div>
+                    <div>Feature</div>
+                    <div style="text-align: center;">Generic</div>
+                    <div style="text-align: center;">GroundWork</div>
                 </div>
                 <div class="comparison-row">
-                    <div class="comparison-cell">Built for detailers</div>
-                    <div class="comparison-cell"><span class="cross">✗</span></div>
-                    <div class="comparison-cell"><span class="check">✓</span></div>
+                    <div>Built for detailers only</div>
+                    <div style="text-align: center;"><span class="cross">✗</span></div>
+                    <div style="text-align: center;"><span class="check">✓</span></div>
                 </div>
                 <div class="comparison-row">
-                    <div class="comparison-cell">Service SEO pages</div>
-                    <div class="comparison-cell"><span class="cross">✗</span></div>
-                    <div class="comparison-cell"><span class="check">✓</span></div>
+                    <div>Service-specific SEO pages</div>
+                    <div style="text-align: center;"><span class="cross">✗</span></div>
+                    <div style="text-align: center;"><span class="check">✓</span></div>
                 </div>
                 <div class="comparison-row">
-                    <div class="comparison-cell">Load under 2s</div>
-                    <div class="comparison-cell"><span class="cross">✗</span></div>
-                    <div class="comparison-cell"><span class="check">✓</span></div>
+                    <div>Loads under 2 seconds</div>
+                    <div style="text-align: center;"><span class="cross">✗</span></div>
+                    <div style="text-align: center;"><span class="check">✓</span></div>
                 </div>
                 <div class="comparison-row">
-                    <div class="comparison-cell">Booking system</div>
-                    <div class="comparison-cell"><span class="cross">✗</span></div>
-                    <div class="comparison-cell"><span class="check">✓</span></div>
+                    <div>Integrated booking system</div>
+                    <div style="text-align: center;"><span class="cross">✗</span></div>
+                    <div style="text-align: center;"><span class="check">✓</span></div>
                 </div>
                 <div class="comparison-row">
-                    <div class="comparison-cell">No monthly fees</div>
-                    <div class="comparison-cell"><span class="cross">✗</span></div>
-                    <div class="comparison-cell"><span class="check">✓</span></div>
+                    <div>No monthly fees</div>
+                    <div style="text-align: center;"><span class="cross">✗</span></div>
+                    <div style="text-align: center;"><span class="check">✓</span></div>
                 </div>
                 <div class="comparison-row">
-                    <div class="comparison-cell">340% avg. increase</div>
-                    <div class="comparison-cell"><span class="cross">✗</span></div>
-                    <div class="comparison-cell"><span class="check">✓</span></div>
+                    <div>340% average increase</div>
+                    <div style="text-align: center;"><span class="cross">✗</span></div>
+                    <div style="text-align: center;"><span class="check">✓</span></div>
                 </div>
             </div>
         </div>
     </section>
     
-    <section style="background: #fafafa;">
+    <section style="background: white;">
         <div class="container">
-            <h2>Pricing</h2>
-            <div class="pricing">
-                <div class="price-card">
+            <div class="section-header">
+                <h2>Simple Pricing, Proven Results</h2>
+                <p class="section-subtitle">Same packages our 127 clients used to get these results</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
                     <h3>Essential</h3>
                     <div class="price">$3,500</div>
-                    <ul>
-                        <li>5-7 pages</li>
+                    <ul class="pricing-features">
+                        <li>5-7 custom pages</li>
                         <li>Mobile-optimized</li>
                         <li>Basic booking</li>
                         <li>Gallery system</li>
                         <li>2-week delivery</li>
                     </ul>
+                    <a href="mailto:cyruswilburn@icloud.com?subject=Essential Package" class="btn btn-secondary" style="width: 100%;">Get Started</a>
                 </div>
-                <div class="price-card">
+                
+                <div class="pricing-card">
                     <h3>Complete</h3>
                     <div class="price">$6,500</div>
-                    <ul>
-                        <li>10+ pages</li>
+                    <ul class="pricing-features">
+                        <li>10+ custom pages</li>
                         <li>Full booking system</li>
                         <li>Service SEO pages</li>
                         <li>Review integration</li>
                         <li>Email automation</li>
                         <li>3-week delivery</li>
                     </ul>
+                    <a href="mailto:cyruswilburn@icloud.com?subject=Complete Package" class="btn btn-primary" style="width: 100%;">Get Started</a>
                 </div>
             </div>
-            <p><strong>Money-back guarantee:</strong> If your site doesn't load faster and work better on mobile, full refund.</p>
         </div>
     </section>
     
-    <section>
+    <div class="trust-section">
         <div class="container">
-            <h2>Common questions</h2>
-            <ul>
-                <li>
-                    <strong>Will I really see these results?</strong><br>
-                    Our average client sees 240%+ increase within 60 days. Results vary by market and competition, but we only work with detailers so we know what works.
-                </li>
-                <li>
-                    <strong>How long does it take?</strong><br>
-                    2-3 weeks. We're fast because we've built 127 detailing sites. We're not starting from scratch.
-                </li>
-                <li>
-                    <strong>Do I pay monthly fees?</strong><br>
-                    No. You own your site. Hosting is $15-30/month (paid to hosting company). Support is optional.
-                </li>
-                <li>
-                    <strong>Can you show me examples?</strong><br>
-                    Yes. During your call we'll show you 5-10 live sites we've built and their results.
-                </li>
-            </ul>
+            <h3 style="font-size: 24px; color: #1a202c; margin-bottom: 40px;">Backed By Our Guarantee</h3>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">💯</div>
+                    <div class="trust-text">100% Money-Back<br>Guarantee</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🏆</div>
+                    <div class="trust-text">127 Verified<br>Clients</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⚡</div>
+                    <div class="trust-text">2-3 Week<br>Delivery</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">📞</div>
+                    <div class="trust-text">24-Hour<br>Response</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2>Join 127 Shops Getting Real Results</h2>
+            <p>Free website audit. See exactly what's costing you bookings right now.</p>
+            
+            <div class="cta-group">
+                <a href="tel:2708019780" class="btn btn-primary">📞 Call: 270-801-9780</a>
+                <a href="mailto:cyruswilburn@icloud.com?subject=Free Website Audit" class="btn btn-secondary">Email for Free Audit</a>
+            </div>
         </div>
     </section>
     
-    <div class="bottom-actions">
-        <a href="tel:2708019780" class="btn btn-secondary">270-801-9780</a>
-        <a href="mailto:cyruswilburn@icloud.com?subject=Free Website Audit" class="btn btn-primary">Email for Audit</a>
+    <div class="mobile-bottom-bar">
+        <a href="tel:2708019780" class="btn btn-primary" style="width: 100%;">Call Now</a>
+        <a href="mailto:cyruswilburn@icloud.com" class="btn btn-secondary" style="width: 100%;">Get Audit</a>
     </div>
 </body>
 </html>

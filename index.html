@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GroundWork Web - Three high-quality website designs for automotive detailing businesses. Choose your approach.">
-    <title>GroundWork Web — Choose Your Version</title>
+    <meta name="description" content="GroundWork Web - Professional websites for automotive detailing businesses. Choose your approach.">
+    <title>GroundWork Web — Choose Your Approach</title>
     <style>
         * {
             margin: 0;
@@ -12,244 +12,338 @@
             box-sizing: border-box;
         }
         
-        html {
-            font-size: 17px;
-            line-height: 1.6;
-        }
-        
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            color: #1a1a1a;
-            background: #f5f5f5;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        header {
-            text-align: center;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             padding: 40px 20px;
         }
         
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
         .logo {
-            font-size: 28px;
-            font-weight: 700;
+            font-size: 32px;
+            font-weight: 800;
+            color: #1a202c;
             margin-bottom: 12px;
         }
         
         .tagline {
             font-size: 18px;
-            color: #666;
+            color: #718096;
         }
         
         h1 {
-            font-size: 36px;
-            font-weight: 700;
-            text-align: center;
-            margin: 48px 0 32px;
+            font-size: 48px;
+            font-weight: 800;
+            color: #1a202c;
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+        
+        .intro {
+            font-size: 20px;
+            color: #4a5568;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
         }
         
         .versions {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 24px;
-            margin: 40px 0;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
         }
         
         .version-card {
-            background: #fff;
-            border: 2px solid #e0e0e0;
-            padding: 32px;
-            transition: border-color 0.2s;
+            background: #f7fafc;
+            padding: 40px 32px;
+            border-radius: 12px;
+            transition: all 0.3s;
+            border: 3px solid transparent;
         }
         
         .version-card:hover {
-            border-color: #1a1a1a;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            border-color: #667eea;
         }
         
         .version-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 16px;
+            align-items: center;
+            margin-bottom: 20px;
         }
         
         .version-name {
             font-size: 24px;
-            font-weight: 700;
+            font-weight: 800;
+            color: #1a202c;
         }
         
         .version-badge {
-            font-size: 13px;
+            background: #667eea;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
             font-weight: 700;
-            padding: 4px 12px;
-            background: #1a1a1a;
-            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .version-desc {
-            margin-bottom: 20px;
-            color: #444;
+            font-size: 17px;
+            color: #4a5568;
+            margin-bottom: 24px;
             line-height: 1.6;
         }
         
         .version-features {
             list-style: none;
-            margin: 16px 0 24px;
+            margin-bottom: 28px;
         }
         
         .version-features li {
             padding: 8px 0;
-            color: #666;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .version-features li:before {
+            content: "✓";
+            color: #48bb78;
+            font-weight: 700;
+            font-size: 18px;
         }
         
         .version-link {
-            display: block;
-            padding: 16px 24px;
-            background: #1a1a1a;
-            color: #fff;
+            display: inline-block;
+            width: 100%;
+            background: #667eea;
+            color: white;
             text-align: center;
+            padding: 16px 24px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 700;
-            transition: background 0.2s;
+            font-size: 16px;
+            transition: all 0.2s;
         }
         
         .version-link:hover {
-            background: #000;
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+        
+        .recommended {
+            border-color: #48bb78;
+            position: relative;
+        }
+        
+        .recommended:before {
+            content: "RECOMMENDED";
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #48bb78;
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .recommended .version-badge {
+            background: #48bb78;
         }
         
         .info {
-            background: #fff;
-            border: 2px solid #e0e0e0;
+            background: #fffbeb;
             padding: 32px;
-            margin: 40px 0;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border-left: 4px solid #f6ad55;
         }
         
         .info h2 {
             font-size: 24px;
             font-weight: 700;
-            margin-bottom: 16px;
+            color: #1a202c;
+            margin-bottom: 12px;
         }
         
         .info p {
+            font-size: 17px;
+            color: #4a5568;
             margin-bottom: 12px;
-            color: #444;
+            line-height: 1.7;
+        }
+        
+        .info strong {
+            color: #2d3748;
         }
         
         .contact {
             text-align: center;
-            padding: 40px 20px;
+            padding-top: 40px;
+            border-top: 2px solid #e2e8f0;
         }
         
         .contact h2 {
-            font-size: 20px;
+            font-size: 28px;
             font-weight: 700;
-            margin-bottom: 16px;
+            color: #1a202c;
+            margin-bottom: 20px;
         }
         
         .contact a {
-            color: #1a1a1a;
+            display: inline-block;
+            margin: 0 12px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #667eea;
             text-decoration: none;
-            font-weight: 700;
-            margin: 0 16px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.2s;
         }
         
         .contact a:hover {
-            text-decoration: underline;
+            background: #f7fafc;
         }
         
-        @media (min-width: 768px) {
-            .versions {
-                grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 12px;
+            }
+            
+            .container {
+                padding: 40px 24px;
             }
             
             h1 {
-                font-size: 44px;
+                font-size: 36px;
+            }
+            
+            .versions {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact a {
+                display: block;
+                margin: 8px 0;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="header">
             <div class="logo">GroundWork Web</div>
-            <div class="tagline">Websites for automotive detailing businesses</div>
+            <div class="tagline">Websites for Automotive Detailing Businesses</div>
+            <h1>Choose Your Approach</h1>
+            <p class="intro">Three professional website designs, each optimized for bookings and mobile users. Pick the style that fits your brand.</p>
         </header>
         
-        <h1>Choose Your Version</h1>
-        
         <div class="info">
-            <h2>Three approaches, all mobile-first</h2>
-            <p>Each version is designed for real mobile devices with large touch targets, readable text, and fast loading. No AI-generated templates. No purple gradients. No glassmorphism.</p>
-            <p><strong>All three work perfectly on phones.</strong> Pick the style that feels right for your business.</p>
+            <h2>What makes these sites different?</h2>
+            <p><strong>Multiple clear CTAs:</strong> Phone, email, and booking options throughout every page.</p>
+            <p><strong>Trust signals everywhere:</strong> Reviews, stats, guarantees, and social proof prominently displayed.</p>
+            <p><strong>Warm, inviting design:</strong> Professional colors, friendly layouts, and engaging visuals.</p>
+            <p><strong>Mobile-optimized:</strong> Large buttons, easy navigation, fast loading on phones.</p>
+            <p><strong>Real conversion focus:</strong> Every element designed to get visitors to book.</p>
         </div>
         
         <div class="versions">
+            <!-- Version 3: Results-Focused -->
+            <div class="version-card recommended">
+                <div class="version-header">
+                    <div class="version-name">Version 3</div>
+                    <div class="version-badge">PROVEN</div>
+                </div>
+                <p class="version-desc">Results-driven with hard numbers, testimonials, and proof. Blue gradient design focused on data and verification.</p>
+                <ul class="version-features">
+                    <li>Big stats front and center</li>
+                    <li>Multiple client testimonials</li>
+                    <li>Comparison table</li>
+                    <li>Trust badges everywhere</li>
+                    <li>Best for: Data-driven buyers</li>
+                </ul>
+                <a href="version3.html" class="version-link">View Version 3 →</a>
+            </div>
+            
+            <!-- Version 1: Direct Response -->
             <div class="version-card">
                 <div class="version-header">
-                    <div class="version-name">Version 1: Direct</div>
-                    <div class="version-badge">CLEAR</div>
+                    <div class="version-name">Version 1</div>
+                    <div class="version-badge">DIRECT</div>
                 </div>
-                <p class="version-desc">No-nonsense, results-driven. Professional blue palette. Maximum clarity.</p>
+                <p class="version-desc">High-energy direct response design. Purple gradient with clear value props and multiple conversion paths.</p>
                 <ul class="version-features">
-                    <li>Navy blue & clean grays</li>
-                    <li>System fonts</li>
-                    <li>Single column layout</li>
-                    <li>Bottom action bar</li>
-                    <li>Best for: conversions</li>
+                    <li>Prominent CTAs everywhere</li>
+                    <li>Clear benefits and features</li>
+                    <li>Before/after approach</li>
+                    <li>Strong guarantees</li>
+                    <li>Best for: Action-oriented buyers</li>
                 </ul>
                 <a href="version1.html" class="version-link">View Version 1 →</a>
             </div>
             
+            <!-- Version 2: Premium Authority -->
             <div class="version-card">
                 <div class="version-header">
-                    <div class="version-name">Version 2: Premium</div>
-                    <div class="version-badge">QUALITY</div>
+                    <div class="version-name">Version 2</div>
+                    <div class="version-badge">PREMIUM</div>
                 </div>
-                <p class="version-desc">Editorial, refined. Premium positioning. Quality signals.</p>
+                <p class="version-desc">Sophisticated premium positioning with warm earth tones. Quality-focused with higher price points.</p>
                 <ul class="version-features">
-                    <li>Serif headlines</li>
-                    <li>Generous whitespace</li>
-                    <li>Neutral palette</li>
-                    <li>Thoughtful spacing</li>
-                    <li>Best for: high-ticket</li>
+                    <li>Premium color palette</li>
+                    <li>Quality positioning</li>
+                    <li>Refined testimonials</li>
+                    <li>Higher price tiers</li>
+                    <li>Best for: High-end clients</li>
                 </ul>
                 <a href="version2.html" class="version-link">View Version 2 →</a>
-            </div>
-            
-            <div class="version-card">
-                <div class="version-header">
-                    <div class="version-name">Version 3: Proven</div>
-                    <div class="version-badge">RESULTS</div>
-                </div>
-                <p class="version-desc">Data-focused, proof-heavy. Results and testimonials. Trust-building.</p>
-                <ul class="version-features">
-                    <li>Stats-driven layout</li>
-                    <li>Comparison tables</li>
-                    <li>Case study focus</li>
-                    <li>Numbers prominent</li>
-                    <li>Best for: conversions</li>
-                </ul>
-                <a href="version3.html" class="version-link">View Version 3 →</a>
             </div>
         </div>
         
         <div class="info">
-            <h2>What makes these different</h2>
-            <p><strong>Real mobile-first:</strong> 54px touch targets, bottom-placed primary actions, tested on actual devices.</p>
-            <p><strong>No AI slop:</strong> No Inter font, no purple gradients, no card-within-card layouts, no glassmorphism.</p>
-            <p><strong>Fast:</strong> Simple HTML/CSS. No frameworks. Loads instantly.</p>
-            <p><strong>Professional colors:</strong> Blues, greens, neutrals. Inviting, not harsh.</p>
-            <p><strong>Accessible:</strong> High contrast, readable sizes, keyboard navigation, semantic HTML.</p>
+            <h2>All versions include:</h2>
+            <p><strong>Mobile-first design:</strong> Built for phones with 56px+ touch targets</p>
+            <p><strong>Fast loading:</strong> Simple HTML/CSS, no heavy frameworks</p>
+            <p><strong>Multiple CTAs:</strong> Call, email, and booking options in multiple locations</p>
+            <p><strong>Trust signals:</strong> Reviews, stats, guarantees, and social proof</p>
+            <p><strong>Professional design:</strong> No generic templates or AI slop</p>
+            <p><strong>Accessible:</strong> High contrast, readable text, semantic HTML</p>
         </div>
         
         <div class="contact">
-            <h2>Questions?</h2>
-            <a href="tel:2708019780">270-801-9780</a>
-            <a href="mailto:cyruswilburn@icloud.com">cyruswilburn@icloud.com</a>
+            <h2>Ready to get started?</h2>
+            <a href="tel:2708019780">📞 270-801-9780</a>
+            <a href="mailto:cyruswilburn@icloud.com">📧 cyruswilburn@icloud.com</a>
         </div>
     </div>
 </body>
